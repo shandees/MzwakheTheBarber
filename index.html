@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>THE BARBER</title>
+</head>
+<body>
+    <section>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><img src="images/icons8-close-30.png" style="height: 26px;"></a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <ul>
+            <li><a href="#" style="font-size: 26px;">MzwakheThe<span>Barber.</span></a></li>
+            <li class="hideOnMobile"><a href="#about">About</a></li>
+            <li class="hideOnMobile"><a href="#services">Services</a>
+            <li class="hideOnMobile"><a href="pricing.html">Pricing</a></li>
+            <li class="hideOnMobile"><a href="gallery.html">MyGallery</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><img src="images/icons8-menu-50.png" style="height: 26px;"></a></li>
+        </ul>
+        </nav>
+<div class="fade-in">
+<div class="homepage-content">
+ <div class="content-header">
+  <h1>Welcome to MzwakheThe<span>Barber</span> Shop</h1>
+  <p>Providing quality grooming services for the modern man.</p>
+ </div>
+ <div class="content-body">
+    <p>I offer a variety of services tailored to your grooming needs.
+        From haircuts to shaves and beard trims, As an expert barber, I'm dedicated to making you look and feel your best.</p>
+     </div>     
+    </div>
+</div>
+</div>
+</div>
+    </section>
+
+<!--About section-->
+<section id="about" class="about-section">
+        <h2 class="about-heading">About</h2>
+        <p class="about-content">Welcome to MzwakheTheBarber, Where cutting-edge style meets unparalleled expertice.
+            Based in the vibrant city of Durban@Kwamashu K section, Mzwakhe brings unique blend of passion, precision, and personality
+            to every client's experience.<br><br>
+            With years of experience honing his craft, Mzwakhe has established himself as a cornerstone of Durban's 
+            grooming scene. His dedication to mastering the art of barbering is evident in every cut,trim and shave he delivers.<br><br>
+            Mzwakhe's commitment to customer satisfaction sets him apart. He takes the time to understand each client's needs. offering personalized
+            advise and guidance to help them look and feel their best.<br><br>
+            At MzwakheTheBarber, its not just about hair but it's about fostering connections, building confidence and leaving a lasting impression. step into Mzwakhe's
+            chair and discover the difference that passion, expertise, and dedication can make to your grooming routine.<br><br>
+            Experience the art of barbering redefined.<br><br>
+            Experience MzwakheTheBarber.
+        </p>
+</section>
+
+<!---Services section-->
+<section id="services" class="services-section">
+    <h3 class="services-heading" style="color: white;">Services</h3>
+    <div class="services-category" style="color: aliceblue;">
+        <h4>Haircuts</h4>
+         <ul>
+            <li>Men's Haircuts</li>
+            <img src="images/brushcut.jpg" style="height: 150px;">
+            
+            <li>Kid's Haircuts</li>
+             <img src="images/IMG-20240505-WA0499.jpg" style="height: 150px;">
+        </ul>
+        <ul>
+            <li>Lady's Cut</li>
+            <img src="images/lady's cut.jpg" style="height: 150px;">
+        </ul>
+    </div>
+</section>
+
+<!---Contact section-->
+<section id="contact">
+        <h6>Contact us</h6>
+        <p>Feel free to reach out to us via the following methods:</p>
+        <ul>
+            <li>Email: Mzwakhelindanimabanga@gmail.com</li>
+            <li>Phone: 0815694015</li>
+            <li>Address: <a href="https://maps.google.com/?q=11+Landa+Road+Kwamashu+k">11 Landa Road, Kwamashu k</a></li>
+        </ul>
+        <p>Or you can fill out the form below:</p>
+        <form action="contactForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Message:</label><br>
+            <input type="message" id="message" name="message" required><br>
+            <textarea name="message" id="message"rows="4"></textarea>
+            <button type="button" onclick="submitform()">Send</button>
+        </form>
+</section>
+
+<footer>
+    <p style="margin-left:35%; margin-top: 20px; bottom: 30px;">&copy; 2024 MzwakheTheBarber. All rights reserved.</p>
+</footer>
+
+<a href="https://wa.me/27664210930" class="whatsap-float" target="_blank">
+    <img src="images/icons8-whatsapp-48.png" alt="whatsap-icon" class="whatsap-icon">
+</a>
+<script>
+
+function showSidebar(){
+         const sidebar = document.querySelector('.sidebar')
+         sidebar.style.display='flex'
+        }
+function hideSidebar(){
+         const sidebar = document.querySelector('.sidebar')
+         sidebar.style.display='none'
+        }
+
+   
+
+    function submitForm(){
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+
+        if (!name|| !email|| !message){
+            alert("Please fill in all fields.");
+            return;
+        }
+        var formData={
+             name: name,
+             email: email,
+             message:message
+        };
+        console.log(formData);
+    }
+</script>
+</body>
+</html>

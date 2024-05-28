@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+    <style>
+
+.gallery{
+            background-color: #a49e98;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: -4rem;
+            display: inline-table;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-row: minmax(150px, auto);
+            margin: 0 auto;
+        }
+        .gallery-item img{
+            width: 100%;
+            height: auto;
+            max-width: 20%;
+            align-items: center;
+            margin-left: 40%;
+            transition: transform 0.5s ease-in-out;
+        }
+        .gallery-item:hover img{
+            transform: scale(2);
+        }
+        header{
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        header h1{
+            font-size: 26px;
+            color: #333;
+        }
+        .back-button{
+            margin-right: 7000px;
+            background-color: #3b3838;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .back-button a{
+           text-decoration: none;
+           color: white;
+        }
+        .back-button:hover{
+            background-color: #333;
+            background-color: #817b7b;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+        header h1 span{
+            color: rgb(255, 42, 4);
+        }
+        .container{
+            padding: 2rem;
+        }
+        .slider-wrapper{
+            position: relative;
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+        
+        .slider{
+            display: flex;
+            aspect-ratio: 16/14;
+            overflow-x: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25);
+            border-radius: 0.5rem;
+        }
+        .slider img{
+            flex: 1 0 100%;
+            scroll-snap-align: start;
+            width: 100%;
+        }
+        .slider img:hover{
+            opacity: 1;
+        }
+        @media(max-width: 768px){
+            .gallery{
+                display: block;
+            }
+
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="back-button"><a href="index.html">Back</a></button>
+        <h1>Mzwakhe's Barber<span> Gallery.</span></h1>  
+    </header>
+    <div class="background"></div>
+
+    <section class="container">
+        <div class="slide">
+    <div class="slider-wrapper">
+        <div class="slider">
+            <img src="images/IMG-20240505-WA0478.jpg">
+            
+            <img src="images/IMG-20240505-WA0477.jpg">
+        
+            <img src="images/IMG-20240505-WA0479.jpg">
+            
+            <img src="images/IMG-20240505-WA0480.jpg">
+        
+            <img src="images/IMG-20240505-WA0481.jpg">
+    
+            <img src="images/IMG-20240505-WA0482.jpg">
+            
+            <img src="images/IMG-20240505-WA0483.jpg">
+    
+            <img src="images/IMG-20240505-WA0484.jpg">
+        
+            <img src="images/IMG-20240505-WA0485.jpg">
+            
+            <img src="images/IMG-20240505-WA0486.jpg">
+         </div>
+    </div>
+</div>
+</body>
+</html>

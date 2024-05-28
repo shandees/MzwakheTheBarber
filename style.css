@@ -1,0 +1,195 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url(images/wp9441853.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0,0,0, 0.1);
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+nav a:hover{
+    background-color: rgb(187, 192, 197);
+}
+span{
+    color: orangered;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 30;
+    background-color: rgba(255, 255, 255, 0.568);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.267);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display:none;
+}
+@media (max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: flex;
+    }
+    .content-header{
+        width: 100%;
+    }
+}
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+    .content-header{
+        width: 100%;
+    }
+}
+.homepage-content{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width:800px;
+    padding: 15px 10px;
+    margin-top: 200px;
+    color: #ccc;
+}
+.content-header{
+    text-align:left;
+}
+.content-header p{
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #fffefe;
+    text-align: left;
+}
+.content-body{
+    line-height: 1.6;
+}
+.about-section{
+    margin-top: 20%;
+    padding: 50px;
+    background-color: #817b7b;
+    text-align: center;
+}
+.about-heading{
+    font-size: 36px;
+    color: #181818;
+    margin-bottom: 20px;
+}
+.about-content{
+    font-size: 18px;
+    color: #181818;
+}
+
+.menu-bar{
+     display: none;
+}
+#contact{
+background-color: #857e7e;
+padding: 20px;
+margin-top: 20px;
+font-family: Arial, Helvetica, sans-serif;
+}
+h6{
+font-size: 24px;
+margin-bottom: 15px;
+}
+ul{
+list-style-type: none;
+padding: 0;
+}
+li{
+margin-bottom: 10px;
+}
+li a{
+text-decoration: none;
+}
+
+form{
+margin-top: 20px;
+}
+label{
+font-weight: bold;
+}
+
+input[type="text"], input[type="email"], textarea {
+width:100%;
+padding: 10px;
+margin-top:5px;
+margin-bottom:10px;
+border:1px solid;
+border-radius:4px;
+box-sizing:border-box;
+}
+
+button{
+background-color: #b0a7a7;
+    color:black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover{
+background-color:#7c7c7c;
+}
+.whatsap-float{
+position: fixed;
+width: 60px;
+height: 60px;
+bottom: 40px;
+right: 40px;
+background-color: transparent;
+border-radius: 50%;
+text-align: center;
+box-shadow: 2px 2px 3px #999;
+z-index: 100;
+}
+.whatsap-float:hover{
+background-color: #128c7e;
+}
+.whatsap-icon{
+width: 40px;
+height: 40px;
+margin-top: 10px;
+}
